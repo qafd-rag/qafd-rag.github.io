@@ -388,7 +388,7 @@
         <!--
           FLOW-FROM-SOURCE BUILD:
           Water flows outward from source. Where water reaches, pipe + node appear.
-
+          
           Timeline:
           0.0s  Source node appears
           0.3s  Water flows Source→G, Source→D (two directions)
@@ -398,7 +398,7 @@
           1.3s  Water flows C→B (6-ring top)
           1.6s  B pops, water flows B→A
           1.9s  A pops
-          1.5s  Water flows D→E (6-ring bottom)
+          1.5s  Water flows D→E (6-ring bottom)  
           1.8s  E pops, water flows E→F
           2.1s  F pops, water flows F→A (ring closes)
           2.2s  Water flows into branches: A→M1, B→M2, E→M3
@@ -656,6 +656,14 @@
         <div class="caption">QAFD-RAG (Ours)<br/><small>Query-Aware Flow Diffusion</small></div>
       </div>
     </div>
+    <p style="margin-top:24px;font-size:0.92rem;color:var(--slate-500);line-height:1.75;max-width:860px;margin-left:auto;margin-right:auto;">
+      Comparison on Wikipedia pages (Apple fruit, Apple Inc., Amazon River, Amazon.com).
+      Query: <em>"Introduce Steve Jobs's products in Apple."</em>
+      <strong style="color:var(--slate-700);">GraphRAG</strong> retrieves entire communities, mixing relevant nodes (e.g., Mac, macOS) with irrelevant ones (e.g., Amazon River, Apple fruit).
+      <strong style="color:var(--slate-700);">LightRAG</strong> focuses on 1-hop neighborhoods, including both relevant nodes (e.g., Steve Jobs, iPhone) and structurally close but irrelevant ones (e.g., Fuji).
+      <strong style="color:var(--slate-700);">QAFD-RAG</strong> reweights edges by the query's holistic meaning, suppressing irrelevant neighborhoods and preventing traversal into unrelated clusters.
+      The resulting subgraph is coherent, with edge thickness reflecting weight and node size indicating importance.
+    </p>
   </div>
 </section>
 
