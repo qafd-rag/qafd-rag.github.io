@@ -422,20 +422,8 @@
   </div>
 </section>
 
-<!-- ============ HOW IT WORKS ============ -->
-<section class="alt">
-  <div class="container">
-    <h2>How It Works</h2>
-    <p class="section-sub">A two-stage pipeline from raw documents to grounded answers</p>
-    <div class="duo-grid">
-      <div class="card"><h3>Stage 1 &mdash; Knowledge Graph Construction</h3><ol><li><strong>Document Chunking</strong> &mdash; Split into context-preserving chunks.</li><li><strong>Entity &amp; Relationship Extraction</strong> &mdash; LLM builds a structured KG with entities as nodes and relationships as edges.</li><li><strong>Embedding</strong> &mdash; All nodes embedded into vector space for similarity matching.</li></ol></div>
-      <div class="card"><h3>Stage 2 &mdash; Query-Aware Retrieval</h3><ol><li><strong>Seed Selection</strong> &mdash; Query matched to KG entities via embedding similarity; LLM reranker filters top seeds.</li><li><strong>Flow Diffusion</strong> &mdash; Mass injected at seeds and propagated via push-relabel with <em>query-aware edge weights</em>.</li><li><strong>Response Generation</strong> &mdash; Top-ranked subgraph assembled into context for LLM answer generation.</li></ol></div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ BENCHMARKS ============ -->
-<section>
+<section class="alt">
   <div class="container">
     <h2>Benchmarks</h2>
     <p class="section-sub">Evaluated on multi-hop QA, UltraDomain QA (11 domains), text-to-SQL, and long-document summarization. Full results in the <a href="https://openreview.net/pdf?id=n28wnc2QTc" style="color:var(--blue-600);">paper</a>.</p>
